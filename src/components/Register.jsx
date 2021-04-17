@@ -32,7 +32,7 @@ const Register = () => {
       .then((res) => res.json())
       .then((data) => {
         alert(data.message);
-        if (data.message === "Registered") window.location = "/login";
+        if (data.message === "Registered") history.push("/login");
       });
     setName("");
     setMail("");

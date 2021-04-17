@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const User = () => {
   const [data, setData] = useState([]);
+  const history = useHistory();
   useEffect(() => {
     fetch("https://login-logout-app-mern.herokuapp.com/home", {
       headers: {
@@ -15,7 +17,7 @@ const User = () => {
   const logout = (e) => {
     e.preventDefault();
     localStorage.clear();
-    window.location = "/login";
+    history.pushState("/login");
   };
   return (
     <div>

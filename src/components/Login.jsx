@@ -32,7 +32,7 @@ const Login = () => {
         if (data.message === "allow") {
           //   console.log(data.userToken);
           localStorage.setItem("auth", JSON.stringify(data.userToken));
-          window.location = "/home";
+          history.push("/home");
         } else {
           alert(data.message);
         }
