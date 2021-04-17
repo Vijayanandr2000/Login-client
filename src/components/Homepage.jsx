@@ -1,6 +1,8 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 const Homepage = () => {
+  const history = useHistory();
   return (
     <div className="container text-center">
       <div className="box">
@@ -9,7 +11,7 @@ const Homepage = () => {
           <div className="container  text-center mt-5">
             <button
               className="btn btn-primary"
-              onClick={() => (window.location.href = "/login")}
+              onClick={() => history.push("/login")}
             >
               LOGIN
             </button>
@@ -17,7 +19,7 @@ const Homepage = () => {
           <div className="container mt-5">
             <button
               className="btn btn-success"
-              onClick={() => (window.location.href = "/register")}
+              onClick={() => history.push("/redister")}
             >
               REGISTER
             </button>
