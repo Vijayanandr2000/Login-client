@@ -29,7 +29,7 @@ const Login = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.message == "allow") {
+        if (data.message === "allow") {
           //   console.log(data.userToken);
           localStorage.setItem("auth", JSON.stringify(data.userToken));
           window.location = "/home";
