@@ -17,7 +17,7 @@ const User = () => {
   const logout = (e) => {
     e.preventDefault();
     localStorage.clear();
-    history.pushState("/login");
+    history.push("/login");
   };
   return (
     <div>
