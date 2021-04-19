@@ -16,7 +16,8 @@ const Reset = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.message == "sent") alert("Check your Mail for reset password");
+        if (data.message === "sent")
+          alert("Check your Mail for reset password");
       });
     setMail("");
   };

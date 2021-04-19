@@ -19,7 +19,7 @@ const Forget = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.message == "password update") history.push("/login");
+        if (data.message === "password update") history.push("/login");
 
         alert(data.message);
       });
