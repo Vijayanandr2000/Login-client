@@ -81,6 +81,12 @@ const Login = () => {
             Login
           </button>
           <button
+            className="btn btn-danger ml-5"
+            onClick={() => history.push("/reset")}
+          >
+            Forget Password
+          </button>
+          <button
             class="btn btn-warning ml-5"
             onClick={() => history.push("/register")}
           >
